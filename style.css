@@ -1,3 +1,47 @@
 body{
     background-color: #749AD4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.ability-choices{
+    display: flex;
+    flex-direction: column;
+}
+
+.ability-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 64px;
+}
+
+.ability-description-container{
+    display: flex;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
+    padding: 8px;
+}
+
+.ability-description{
+    margin: 0px 16px;
+}
+
+button.choice{
+    background-color: #749AD4;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size:32px;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+    cursor: pointer;
+}
+
+.btn-canvas{
+    margin-bottom: 16px;
 }

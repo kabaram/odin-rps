@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +13,21 @@
 
 <body>
     <h1>Kirby's Abgility Arena!</h1>
-    <div class = 'ability-choices'>
-        <button class = 'stone'>Stone</button>
-        <button class = 'parasol'>Parasol</button>
-        <button class = 'sword'>Sword</button>
+
+    <div class='ability-choices'>
+        <div class='ability-button-container'>
+            <button class='stone choice'><canvas class='btn-canvas stone-choice-canvas'></canvas>Stone</button>
+            <button class='parasol choice'><canvas class='btn-canvas parasol-choice-canvas'></canvas>Parasol</button>
+            <button class='sword choice'><canvas class='btn-canvas sword-choice-canvas'></canvas>Sword</button>
+        </div>
+        <div class ='ability-description-container'>
+            <p class="ability-description">Falls from the sky to crush swords but loses momentum with parasols.</p>
+            <p class="ability-description">Renders stones useless by slowing them but is vulnerable to sharp swords.</p>
+            <p class="ability-description">Decimates parasols by slashing them but instantly dulled by falling stones.</p>
+        </div>
     </div>
 </body>
 
 <script src="rps.js"></script>
+
 </html>
