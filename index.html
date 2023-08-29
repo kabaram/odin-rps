@@ -5,27 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirby Abgility Arena</title>
+    <title>Kirby's Ability Arena</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 
 <body>
-    <h1>Kirby's Abgility Arena!</h1>
+    <h1 id='page-title'>KIRBY'S ABILITY ARENA</h1>
+    <h3 id="image-credit">Image Credit:<a href="https://www.spriters-resource.com/fullview/49192/"> The Spriter's Resource</a></h3>
 
-    <div class='ability-choices'>
-        <div class='ability-button-container'>
-            <button class='stone choice'><canvas class='btn-canvas stone-choice-canvas'></canvas>Stone</button>
-            <button class='parasol choice'><canvas class='btn-canvas parasol-choice-canvas'></canvas>Parasol</button>
-            <button class='sword choice'><canvas class='btn-canvas sword-choice-canvas'></canvas>Sword</button>
+
+    <div class='result-outer-container'>
+        <div class="score-container">
+            <div class="player-score">Player: 0</div>
+            <div class="computer-score">Computer: 0</div>
         </div>
-        <div class ='ability-description-container'>
-            <p class="ability-description">Falls from the sky to crush swords but loses momentum with parasols.</p>
-            <p class="ability-description">Renders stones useless by slowing them but is vulnerable to sharp swords.</p>
-            <p class="ability-description">Decimates parasols by slashing them but instantly dulled by falling stones.</p>
+        <div class="result-inner-container">
+
+            <div class='result-icon-cell'>
+                <canvas class='player-result'></canvas>
+            </div>
+
+
+            <div class='result-text-cell'>Choose an ability below to beat the computer. First to 5 wins!</div>
+
+            <div class='result-icon-cell'>
+                <canvas class='computer-result'></canvas>
+
+            </div>
         </div>
     </div>
+
+    <div class='ability-choices'>
+        <div class='choice-button-cell'>
+            <div class="choice-button-container">
+                <button class='stone choice'><canvas class='btn-canvas stone-choice-canvas'></canvas>Stone</button>
+                <p class="ability-description">Falls from the sky to crush swords but loses momentum with parasols.</p>
+            </div>
+        </div>
+        <div class='choice-button-cell'>
+            <div class="choice-button-container">
+                <button class='parasol choice'><canvas
+                        class='btn-canvas parasol-choice-canvas'></canvas>Parasol</button>
+                <p class="ability-description">Renders stones useless by slowing them but is vulnerable to sharp swords.
+                </p>
+            </div>
+        </div>
+        <div class='choice-button-cell'>
+            <div class="choice-button-container">
+                <button class='sword choice'><canvas class='btn-canvas sword-choice-canvas'></canvas>Sword</button>
+                <p class="ability-description">Decimates parasols by slashing them but is subject to breaking from a fallen stone.
+                </p>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 <script src="rps.js"></script>

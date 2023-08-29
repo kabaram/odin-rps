@@ -1,47 +1,126 @@
-body{
-    background-color: #749AD4;
+h3{
+ margin-bottom: 8px;   
+}
+
+body {
+    /* background-color: #6478c3; */
+    background-color: black;
+    color: wheat;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-}
-
-.ability-choices{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.ability-button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 64px;
+
+#page-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:lightpink;
+    text-shadow: 2px 2px crimson;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 8px;
 }
 
-.ability-description-container{
-    display: flex;
+.ability-choices {
+    display: table-row;
+    justify-content: center;
+    align-items: center;
     color: whitesmoke;
     font-weight: bold;
-    font-size: 16px;
-    font-style: italic;
-    padding: 8px;
+    font-size: 24px;
+    gap: 16px;
+    max-width: 1000px;
+    border-spacing: 32px;
+    border-radius: 10px;
+    border: 10px solid black;
+    background-color: black;
+
 }
 
-.ability-description{
-    margin: 0px 16px;
+.choice-button-container {
+    background-color: #749AD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 64px;
+    height: 20vh;
+
 }
 
-button.choice{
+.choice-button-cell {
+    background-color: #749AD4;
+    display: table-cell;
+    border-radius: 10px;
+    padding: 16px;
+    align-items: center;
+    box-shadow: wheat 4px 4px;
+    width: 30%;
+}
+
+
+
+button.choice {
     background-color: #749AD4;
     color: whitesmoke;
     font-weight: bolder;
-    font-size:32px;
+    font-size: 36px;
+    text-shadow: 2px 2px 2px black;
     border: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-end;
+    justify-content: flex-end;
     cursor: pointer;
 }
 
-.btn-canvas{
+.btn-canvas {
     margin-bottom: 16px;
+}
+
+.result-outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    gap: 16px;
+    max-width: 1000px;
+    border-spacing: 32px;
+    border-radius: 10px;
+    background-color: black;
+    padding: 16px;
+    width: 40vw;
+    height: 35vh;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.result-inner-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #749AD4;
+    border-radius: 10px;
+    width: 90%;
+    height: 70%;
+    padding: 16px 16px;
+    box-shadow: wheat 4px 4px;
+}
+
+.result-text-cell{
+    width: 30%;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.score-container{
+    width: 95%;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 16px;
 }
