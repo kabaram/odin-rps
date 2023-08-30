@@ -1,11 +1,12 @@
 //maintains location and size data of subimages from sprite sheet
 class Sprite {
-    constructor(x, y, width, height, docClass) {
+    constructor(x, y, width, height, docClass, alt) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.docClass = docClass;
+        this.alt = alt;
     }
 
     showAbility() {
@@ -28,6 +29,7 @@ class Sprite {
         let context = myCanvas.getContext('2d');
         let img = new Image();
         img.src = IMAGE_SOURCE;
+        img.alt = this.alt;
         img.onload = function () {
             context.drawImage(img, sprite.x + 13, sprite.y - 14, sprite.width, sprite.height, 0, 0, myCanvas.width, myCanvas.height);
         }
@@ -152,19 +154,19 @@ const SPRITE_SHEET_BACKGROUND = "749AD4";
 //Sprite sheet
 const IMAGE_SOURCE = "./images/kirby-ss.png";
 
-const STONE_CHOICE_SPRITE = new Sprite(162, 796, 22, 16, '.stone-choice-canvas');
-const STONE_WIN_SPRITE = new Sprite(134, 796, 22, 19);
-const STONE_LOSE_SPRITE = new Sprite(85, 797, 16, 14);
+const STONE_CHOICE_SPRITE = new Sprite(162, 796, 22, 16, '.stone-choice-canvas', 'Kirby as a stone');
+const STONE_WIN_SPRITE = new Sprite(134, 796, 22, 19, null, 'Kirby as stone in mid-air');
+const STONE_LOSE_SPRITE = new Sprite(85, 797, 16, 14, null, 'Kirby in defeated posture on ground');
 const STONE_ABILITY = new Ability('Stone', 'crush', STONE_CHOICE_SPRITE, STONE_WIN_SPRITE, STONE_LOSE_SPRITE, 0);
 
-const PARASOL_CHOICE_SPRITE = new Sprite(168, 1425, 20, 31, '.parasol-choice-canvas');
-const PARASOL_WIN_SPRITE = new Sprite(197, 1442, 20, 30);
-const PARASOL_LOSE_SPRITE = new Sprite(16, 1557, 17, 26);
+const PARASOL_CHOICE_SPRITE = new Sprite(168, 1425, 20, 31, '.parasol-choice-canvas', 'Kirby holding parasol');
+const PARASOL_WIN_SPRITE = new Sprite(197, 1442, 20, 30, null, 'Kirby using parasol to float downward');
+const PARASOL_LOSE_SPRITE = new Sprite(16, 1557, 17, 26, null, 'Kirby lying face-down broken parasol');
 const PARASOL_ABILITY = new Ability('Parasol', 'cover', PARASOL_CHOICE_SPRITE, PARASOL_WIN_SPRITE, PARASOL_LOSE_SPRITE, 1);
 
-const SWORD_CHOICE_SPRITE = new Sprite(308, 1030, 18, 31, '.sword-choice-canvas');
-const SWORD_WIN_SPRITE = new Sprite(266, 1026, 20, 35);
-const SWORD_LOSE_SPRITE = new Sprite(17, 1148, 16, 23);
+const SWORD_CHOICE_SPRITE = new Sprite(308, 1030, 18, 31, '.sword-choice-canvas', 'Kirby holding sword');
+const SWORD_WIN_SPRITE = new Sprite(266, 1026, 20, 35, null, 'Kirby holding sword in victorious position.');
+const SWORD_LOSE_SPRITE = new Sprite(17, 1148, 16, 23, null, 'Kirby lying face-down holding sword.');
 const SWORD_ABILITY = new Ability('Sword', 'slash', SWORD_CHOICE_SPRITE, SWORD_WIN_SPRITE, SWORD_LOSE_SPRITE, 2);
 
 
