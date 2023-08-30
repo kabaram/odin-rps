@@ -1,9 +1,9 @@
 h3{
  margin-bottom: 8px;   
+ margin-top: 8px;
 }
 
 body {
-    /* background-color: #6478c3; */
     background-color: black;
     color: wheat;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-top: 64px;
-    height: 20vh;
+    height: 30vh;
 
 }
 
@@ -61,18 +61,20 @@ body {
 
 
 
-button.choice {
+.stone-choice, .parasol-choice, .sword-choice {
     background-color: #749AD4;
     color: whitesmoke;
     font-weight: bolder;
     font-size: 36px;
     text-shadow: 2px 2px 2px black;
-    border: 0px;
+    border: none;
     display: flex;
+    align-self:center;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
+    width: 60%;
 }
 
 .btn-canvas {
@@ -80,7 +82,7 @@ button.choice {
 }
 
 .result-outer-container {
-    display: flex;
+    display:table-column;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -92,7 +94,7 @@ button.choice {
     background-color: black;
     padding: 16px;
     width: 40vw;
-    height: 35vh;
+    min-height: 30vh;
     margin-bottom: 16px;
     flex: 1;
 }
@@ -104,7 +106,7 @@ button.choice {
     background-color: #749AD4;
     border-radius: 10px;
     width: 90%;
-    height: 70%;
+    height: 20vh;
     padding: 16px 16px;
     box-shadow: wheat 4px 4px;
 }
@@ -123,4 +125,14 @@ button.choice {
     justify-content: space-around;
     gap: 16px;
     padding: 16px;
+}
+
+.hovering{
+    transform: scale(1.2);
+    border: 5px solid wheat;
+}
+
+.clicking{
+    transform: scale(0.8);
+    border: none;
 }
